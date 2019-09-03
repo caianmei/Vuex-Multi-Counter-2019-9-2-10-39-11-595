@@ -1,28 +1,31 @@
 <template>
-    <div class="counter">
-        <button class="plus" @click="plus">+</button>
-        <span class="value">{{value}}</span>
-        <button class="minus" @click="minus">-</button>
-    </div>
+  <div class="counter">
+    <button class="plus" @click="plus">+</button>
+    <span class="value">{{getNumber()}}</span>
+    <button class="minus" @click="minus">-</button>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'counter',
-        props: {
-            index: Number,
-            value: Number,
-        },
-        methods: {
-            minus: function () {
-                this.$emit('update', this.index, this.value - 1)
-            },
-            plus: function () {
-                this.$emit('update', this.index, this.value + 1)
-            }
-        }
+//import store from "../store/store";
+export default {
+  name: "counter",
+  props: {
+    index: Number
+  },
+  methods: {
+    getNumber: function() {
+      return this.$store.getters.getNum(this.index);
+    },
+    minus: function() {
+      this.$store.commit("update", {index:this.index,value:-1});
+    },
+    plus: function() {
+      this.$store.commit("update", {index:this.index,value:1});
     }
+  }
+};
 </script>
-<style scoped>
 
+<style scoped>
 </style>

@@ -1,8 +1,29 @@
-#### 第一个Vuex练习-Vuex-multi-counter
-要求：
-在Vue练习-2-multi-counter的基础上使用Vuex进行状态管理
-上传代码到自己的代码库，将地址提交到这里
+# vuexmulti
 
-要求
-Git commit 小步提交
-每次提交的评论都有意义
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
